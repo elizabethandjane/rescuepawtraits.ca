@@ -21,3 +21,5 @@ Location: Ottawa, Canada
 ## Hosting
 
 - GitHub <https://github.com/elizabethandjane/rescuepawtraits.ca>
+- Amazon S3 <https://aws.amazon.com/>
+- CloudFlare <https://www.cloudflare.com/>

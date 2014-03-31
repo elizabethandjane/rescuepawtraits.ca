@@ -1,0 +1,168 @@
+*,
+*::after,
+*::before {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+
+  color: #555;
+  font: normal 100%/1.5 Georgia,serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:link,
+a:visited {
+  border-bottom: 0.1em solid rgba(255,255,255,0.5);
+
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  border-color: #fff;
+}
+
+.masthead {
+  margin: 0;
+  padding: 1em 0;
+
+  background-color: #556f4b;
+
+  color: #fff;
+  text-align: center;
+}
+
+.masthead__wrapper {
+  margin: 0 auto;
+}
+
+.header {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+}
+
+.header__logo {
+  display: inline-block;
+  max-width: 360px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.header__by {
+  display: inline-block;
+  margin: 0 1em;
+  vertical-align: middle;
+
+  font: italic 0.875em/1.5 Baskerville,Palatino,"Book Antiqua",serif;
+}
+
+.header__link,
+.header__link:link,
+.header__link:visited {
+  display: inline-block;
+  vertical-align: middle;
+
+  border: 0;
+}
+
+.header__link img {
+  display: inline-block;
+  max-width: 300px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.intro {
+  padding: 1em 0;
+
+  background-color: #718c63;
+  color: #fff;
+  font-style: italic;
+  text-align: center;
+}
+
+.intro p {
+  margin: 0 auto;
+  max-width: 40em;
+}
+
+.footer {
+  padding: 1em 0;
+
+  background-color: #718c63;
+
+  color: #fff;
+  font-size: 0.75em;
+  text-align: center;
+}
+
+.copyright {
+  margin: 0;
+  padding: 0;
+}
+
+.dogs {
+  margin: 10px auto 0;
+  padding: 0;
+  position: relative;
+
+  list-style-type: none;
+}
+
+.dog {
+  margin-bottom: 10px;
+  width: 320px;
+
+  background-color: #dfe7da;
+  border: 1px solid #d1dfc8;
+  border-radius: 6px;
+
+  text-align: center;
+}
+
+.dog__wrapper {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.dog__img {
+  display: block;
+}
+
+.dog__link,
+.dog__link:link,
+.dog__link:visited {
+  display: block;
+  padding: 10px;
+
+  border: 0;
+
+  color: #555;
+  text-decoration: none;
+}
+
+.dog__name {
+  display: block;
+  margin-top: 10px;
+
+  color: #556f4b;
+  font: bold 1.5em/1.5 "Josefin Sans", sans-serif;
+}
+
+.dog__blurb {
+  margin: 0;
+}

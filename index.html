@@ -4,134 +4,46 @@
 <html lang="en-ca">
 <head>
   <meta charset="utf-8">
-  <title>Rescue Pawtraits</title>
+  <title>Rescue Pawtraits — Fabulous photos for rescue dogs — Ottawa, Canada</title>
+  <meta name="description" content="The stories in my Rescue Pawtraits celebrate the beginning of a new chapter for these dogs – the start of the rest of their new, and better, lives.">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-    *,
-    *::after,
-    *::before {
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-    }
-    html {
-      margin: 0;
-      padding: 0;
-      font: normal 100%/1.5 sans-serif;
-    }
-    body {
-      margin: 0;
-      padding: 0;
-    }
-    a,
-    a:link,
-    a:visited {
-      border-bottom: 0.1em solid rgba(255,255,255,0.5);
-      color: #fff;
-      text-decoration: none;
-    }
-    a:hover,
-    a:focus,
-    a:active {
-      border-color: #fff;
-    }
-    .masthead {
-      margin: 0 0 10px;
-      padding: 1em 0;
-      background-color: #718c63;
-      color: #fff;
-      text-align: center;
-    }
-    .masthead__wrapper {
-      margin: 0 auto;
-      max-width: 30em;
-    }
-    .header {
-      margin: 0;
-      font-size: 1.5em;
-    }
-    .header__text {
-      display: block;
-    }
-    .header__by {
-      display: block;
-      font: italic 0.875em/1.5 Baskerville,Palatino,"Book Antiqua",serif;
-    }
-    .footer {
-      padding: 1em 0;
-      background-color: #718c63;
-      color: #fff;
-      font-size: 0.75em;
-      text-align: center;
-    }
-    .dogs {
-      margin: 0 auto;
-      padding: 0;
-      position: relative;
-      list-style-type: none;
-    }
-    .dog {
-      margin-bottom: 10px;
-      width: 320px;
-      text-align: center;
-      background-color: #e2e2e2;
-      border-radius: 6px;
-    }
-    .dog__wrapper {
-      display: block;
-      margin: 0;
-      padding: 0;
-    }
-    .dog__img {
-      display: block;
-    }
-    .dog__link,
-    .dog__link:link,
-    .dog__link:visited {
-      display: block;
-      padding: 10px;
-      border: 0;
-      color: #333;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    .dog__name {
-      display: block;
-      margin-top: 10px;
-      font-size: 1.125em;
-    }
-  </style>
+  <link href="http://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
+  <link href="/css/rescue-pawtraits.css" rel="stylesheet">
 </head>
 <body>
 
 <header class="masthead" role="banner">
   <div class="masthead__wrapper">
     <h1 class="header">
-      <span class="header__text">Rescue Pawtraits</span>
+      <img class="header__logo" src="/img/rescue-pawtraits.svg" alt="Rescue Pawtraits">
       <span class="header__by">by</span>
-      <a class="header__link" href="http://elizabethandjane.ca" rel="external">elizabeth&amp;jane photography</a>
+      <a class="header__link" href="http://elizabethandjane.ca" rel="external"><img src="/img/elizabethandjane.svg" alt="elizabeth&amp;jane photography"></a>
     </h1>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
   </div>
 </header>
+
+<div class="intro">
+  <p>I tell stories not with words but with images. The stories in my Rescue Pawtraits celebrate the beginning of a new chapter for these dogs – the start of the rest of their new, and better, lives.</p>
+</div>
 
 <main role="main">
   <ol class="dogs">
     {% for dog in site.posts %}
       <li class="dog dog--{{dog.orientation}}">
-        <figure class="dog__wrapper">
+        <div class="dog__wrapper">
           <a class="dog__link" href="{{dog.link}}">
             <img class="dog__img" src="{{site.cdn}}/{{dog.image}}" {{site.sizes[dog.orientation]}} alt="">
-            <figcaption class="dog__name">{{dog.name}}</figcaption>
+            <strong class="dog__name">{{dog.name}}</strong>
+            <p class="dog__blurb">{{dog.blurb}}</p>
           </a>
-        </figure>
+        </div>
       </li>
     {% endfor %}
   </ol>
 </main>
 
 <footer class="footer" role="contentifno">
-  <p>© {{site.time | date:'%Y'}} <a href="http://elizabethandjane.ca" rel="external">elizabethandjane photography</a>.</p>
+  <p class="copyright">© {{site.time | date:'%Y'}} <a href="http://elizabethandjane.ca" rel="external">elizabethandjane photography</a>.</p>
 </footer>
 
 <script src="/bower_components/masonry/dist/masonry.pkgd.min.js"></script>

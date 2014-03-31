@@ -23,6 +23,47 @@
       margin: 0;
       padding: 0;
     }
+    a,
+    a:link,
+    a:visited {
+      border-bottom: 0.1em solid rgba(255,255,255,0.5);
+      color: #fff;
+      text-decoration: none;
+    }
+    a:hover,
+    a:focus,
+    a:active {
+      border-color: #fff;
+    }
+    .masthead {
+      margin: 0 0 10px;
+      padding: 1em 0;
+      background-color: #718c63;
+      color: #fff;
+      text-align: center;
+    }
+    .masthead__wrapper {
+      margin: 0 auto;
+      max-width: 30em;
+    }
+    .header {
+      margin: 0;
+      font-size: 1.5em;
+    }
+    .header__text {
+      display: block;
+    }
+    .header__by {
+      display: block;
+      font: italic 0.875em/1.5 Baskerville,Palatino,"Book Antiqua",serif;
+    }
+    .footer {
+      padding: 1em 0;
+      background-color: #718c63;
+      color: #fff;
+      font-size: 0.75em;
+      text-align: center;
+    }
     .dogs {
       margin: 0 auto;
       padding: 0;
@@ -44,16 +85,34 @@
     .dog__img {
       display: block;
     }
-    .dog__link {
+    .dog__link,
+    .dog__link:link,
+    .dog__link:visited {
       display: block;
       padding: 10px;
+      border: 0;
+      color: #333;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .dog__name {
+      display: block;
+      margin-top: 10px;
+      font-size: 1.125em;
     }
   </style>
 </head>
 <body>
 
-<header role="banner">
-
+<header class="masthead" role="banner">
+  <div class="masthead__wrapper">
+    <h1 class="header">
+      <span class="header__text">Rescue Pawtraits</span>
+      <span class="header__by">by</span>
+      <a class="header__link" href="http://elizabethandjane.ca" rel="external">elizabeth&amp;jane photography</a>
+    </h1>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+  </div>
 </header>
 
 <main role="main">
@@ -71,8 +130,8 @@
   </ol>
 </main>
 
-<footer role="contentifno">
-  <p>© {{site.time | date:'%Y'}} elizabethandjane photography.</p>
+<footer class="footer" role="contentifno">
+  <p>© {{site.time | date:'%Y'}} <a href="http://elizabethandjane.ca" rel="external">elizabethandjane photography</a>.</p>
 </footer>
 
 <script src="/bower_components/masonry/dist/masonry.pkgd.min.js"></script>

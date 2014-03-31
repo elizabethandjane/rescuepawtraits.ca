@@ -1,5 +1,8 @@
 markdown: redcarpet
 permalink: pretty
+exclude:
+  - README.md
+  - aws-s3.policy
 
 cdn: http://images.rescuepawtraits.ca
 

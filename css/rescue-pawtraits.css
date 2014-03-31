@@ -94,7 +94,7 @@ a:active {
 }
 
 .intro {
-  padding: 1em 0;
+  padding: 1em 8px;
 
   background-color: #718c63;
   color: #fff;
@@ -123,28 +123,51 @@ a:active {
 }
 
 .dogs {
-  margin: 10px auto 0;
+  margin: 0 auto;
   padding: 0;
   position: relative;
+  width: 320px;
 
   list-style-type: none;
 }
 
 .dog {
-  margin-bottom: 10px;
   width: 320px;
 
   background-color: #dfe7da;
   border: 1px solid #d1dfc8;
-  border-radius: 6px;
 
   text-align: center;
+}
+
+@media only screen and (min-width: 670px) {
+
+  .dogs {
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .dog {
+    margin-bottom: 8px;
+
+    border-radius: 6px;
+  }
+
 }
 
 .dog__wrapper {
   display: block;
   margin: 0;
   padding: 0;
+}
+
+.dog__img-wrapper {
+  display: block;
+  overflow: hidden;
+  width: 300px;
+
+  border-radius: 4px;
 }
 
 .dog__img {
@@ -155,7 +178,7 @@ a:active {
 .dog__link:link,
 .dog__link:visited {
   display: block;
-  padding: 10px;
+  padding: 8px;
 
   border: 0;
 

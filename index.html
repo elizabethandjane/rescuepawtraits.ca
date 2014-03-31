@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en-ca">
 <head>
@@ -5,7 +7,47 @@
   <title>Rescue Pawtraits</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-
+    *,
+    *::after,
+    *::before {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    html {
+      margin: 0;
+      padding: 0;
+      font: normal 100%/1.5 sans-serif;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .dogs {
+      margin: 0 auto;
+      padding: 0;
+      position: relative;
+      list-style-type: none;
+    }
+    .dog {
+      margin-bottom: 10px;
+      width: 320px;
+      text-align: center;
+      background-color: #e2e2e2;
+      border-radius: 6px;
+    }
+    .dog__wrapper {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+    .dog__img {
+      display: block;
+    }
+    .dog__link {
+      display: block;
+      padding: 10px;
+    }
   </style>
 </head>
 <body>
@@ -15,13 +57,17 @@
 </header>
 
 <main role="main">
-  <ol>
-    <li>
-      <figure>
-        <img src="" alt="">
-        <figcaption></figcaption>
-      </figure>
-    </li>
+  <ol class="dogs">
+    {% for dog in site.posts %}
+      <li class="dog dog--{{dog.orientation}}">
+        <figure class="dog__wrapper">
+          <a class="dog__link" href="{{dog.link}}">
+            <img class="dog__img" src="{{site.cdn}}/{{dog.image}}" {{site.sizes[dog.orientation]}} alt="">
+            <figcaption class="dog__name">{{dog.name}}</figcaption>
+          </a>
+        </figure>
+      </li>
+    {% endfor %}
   </ol>
 </main>
 
@@ -29,9 +75,16 @@
   <p>© {{site.time | date:'%Y'}} elizabethandjane photography.</p>
 </footer>
 
-<script src="js/masonry.pkgd.min.js"></script>
+<script src="/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
 <script>
-
+  var container = document.querySelector('.dogs');
+  var msnry = new Masonry(container, {
+    columnWidth: 320,
+    itemSelector: '.dog',
+    gutter: 10,
+    transitionDuration: 0,
+    isFitWidth: true
+  });
 </script>
 </body>
 </html>

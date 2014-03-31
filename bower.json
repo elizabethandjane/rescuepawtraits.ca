@@ -1,0 +1,18 @@
+{
+  "name": "rescuepawtraits.ca",
+  "version": "1.0.0",
+  "authors": [
+    "Thomas J Bradley <hey@thomasjbradley.ca>"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "masonry": "~3.1.5"
+  }
+}

@@ -1,7 +1,7 @@
 markdown: redcarpet
 permalink: pretty
 
-cdn: /cdn-images
+cdn: http://images.rescuepawtraits.ca
 
 sizes:
   portrait: 'width="300" height="452"'

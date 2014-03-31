@@ -1,0 +1,5 @@
+# robotstxt.org
+
+Sitemap: http://rescuepawtraits.ca/sitemap.xml
+
+User-Agent: *

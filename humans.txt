@@ -1,0 +1,23 @@
+# humanstxt.org
+
+# TEAM
+
+Designer & Developer: Thomas J Bradley <hey@thomasjbradley.ca>
+Site: http://thomasjbradley.ca
+GitHub: https://github.com/thomasjbradley
+Twitter: @thomasjbradley
+Location: Ottawa, Canada
+
+---
+
+# TECHNOLOGY
+
+## Software
+
+- Sublime Text 3 (with Vintageous)
+- Git + GitHub
+- Markdown
+
+## Hosting
+
+- GitHub <https://github.com/elizabethandjane/rescuepawtraits.ca>

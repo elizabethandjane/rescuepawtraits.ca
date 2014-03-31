@@ -102,9 +102,19 @@ a:active {
   text-align: center;
 }
 
-.intro p {
+.intro__wrapper {
   margin: 0 auto;
   max-width: 40em;
+}
+
+.intro__text {
+  margin: 0 auto 1em;
+}
+
+.intro__terms {
+  margin: 0;
+
+  font-size: 0.75em;
 }
 
 .footer {

@@ -52,9 +52,9 @@
 <nav role="navigation">
   <ol class="pager">
     {% if paginator.previous_page %}
-      <li><a class="pager__link" href="{{paginator.previous_page_path}}">Prev</a></li>
+      <li><a class="pager__link pager--prev" href="{{paginator.previous_page_path}}">&larr;&nbsp;Prev</a></li>
     {% else %}
-      <li><span class="pager__link pager__link--disabled">Prev</span></li>
+      <li><span class="pager__link pager--prev pager__link--disabled">&larr;&nbsp;Prev</span></li>
     {% endif %}
 
     {% for page in (1..paginator.total_pages) %}
@@ -68,9 +68,9 @@
     {% endfor %}
 
     {% if paginator.next_page %}
-      <li><a class="pager__link" href="{{paginator.next_page_path}}">Next</a></li>
+      <li><a class="pager__link pager--next" href="{{paginator.next_page_path}}">Next&nbsp;&rarr;</a></li>
     {% else %}
-      <li><span class="pager__link pager__link--disabled">Next</span></li>
+      <li><span class="pager__link pager--next pager__link--disabled">Next&nbsp;&rarr;</span></li>
     {% endif %}
   </ol>
 </nav>

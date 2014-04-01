@@ -108,13 +108,26 @@ a:active {
 }
 
 .intro__text {
-  margin: 0 auto 1em;
+  margin: 0;
 }
 
 .intro__terms {
   margin: 0;
 
   font-size: 0.75em;
+}
+
+.hr-decorated {
+  margin: 0;
+  padding: 24px 0;
+
+  background: transparent none center center;
+  background-image:
+    url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAUCAMAAACpgK3LAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJNQTFRFcYxjVW9LcItiVnBMYHtVXHdRW3VQY31Xb4phXXhSaINcaoVdXHZRV3FNaYNcX3pUaoRdWnRPZ4JbYXtVWHJObYhgW3ZQcItja4ZeWXNOY35XWHJNZoBZbohgb4piaYRdWXNPbIZeZ4JaZX9ZZYBZZ4FabYhfaIJbYHpUV3FMWnVQZoFaXnhTZH5YW3ZRaYRcbolgfcGidQAAAL1JREFUeNqskccOwkAMRD3Z9N4DCb13+P+vwwECIQsSB+Zgef2ksb0m+oN8T78QmepG+QAj4ECFDhgyU8AyYw6WDIsaOgGH4IOty/WpxmHfAcutm9lApahAvztQCkQ0sxwa7k6rkaqP21Cwm9082LrfhnUr3sDsseWZc9GGDhcGVAp4Phmc629N15Gl1GsA8bHdolF5YxDhxJt3WQ8P5V/+4K5QYtmTIZFg+IKqfJQkrTTDX+TCMn86/1WAAQA0OgdBrh47swAAAABJRU5ErkJggg=="),
+    url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAMAAADQK89MAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRFVW9LAAAArlMfKwAAAA5JREFUeNpiYIADgAADAAALAAEgaaOaAAAAAElFTkSuQmCC")
+  ;
+  background-repeat: no-repeat, repeat-x;
+  border: 0;
 }
 
 .footer {

@@ -238,15 +238,21 @@ a:active {
 
 }
 
-.pager {
-  margin: 0;
+.loader {
+  display: block;
   padding: 1em 0;
 
   background-color: #718c63;
 
   font-size: 1.125em;
-  list-style-type: none;
   text-align: center;
+}
+
+.pager {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
 }
 
 .pager > li {
@@ -290,6 +296,25 @@ a:active {
 .pager__link--disabled:focus,
 .pager__link--disabled:active {
   background-color: #67805b;
+
+  color: #556f4b;
+}
+
+.load-btn {
+  padding: 0.5em 1em;
+
+  background-color: #556f4b;
+  border: 2px solid #42553a;
+  border-radius: 8px;
+  cursor: pointer;
+
+  color: #fff;
+  font-size: inherit;
+}
+
+.load-btn:hover {
+  background-color: #fff;
+  border-color: #556f4b;
 
   color: #556f4b;
 }

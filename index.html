@@ -8,8 +8,8 @@
   <meta name="description" content="The stories in my Rescue Pawtraits celebrate the beginning of a new chapter for these dogs – the start of the rest of their new, and better, lives.">
   <link rel="source" href="https://github.com/elizabethandjane/rescuepawtraits.ca">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="http://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
   <link href="/css/rescue-pawtraits.css" rel="stylesheet">
+  <script src="/js/modernizr.min.js"></script>
 </head>
 <body>
 
@@ -79,20 +79,34 @@
   <p class="copyright">© {{site.time | date:'%Y'}} <a href="http://elizabethandjane.ca" rel="external">elizabethandjane photography</a>.</p>
 </footer>
 
-<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/connection.js"></script>
 <script>
-  var container, msnry;
+  var cutsTheMustard = 'querySelector' in document && 'localStorage' in window && 'addEventListener' in window;
+  var filesToLoad = [
+    '//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js',
+    '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js'
+  ];
 
   if (document.documentElement.clientWidth >= 670) {
-    container = document.querySelector('.dogs');
-    msnry = new Masonry(container, {
-      columnWidth: 320,
-      itemSelector: '.dog',
-      gutter: 8,
-      transitionDuration: 0,
-      isFitWidth: true
-    });
+    filesToLoad.push('/js/masonry.pkgd.min.js');
   }
+
+  filesToLoad.push('/js/rescue-pawtraits.js');
+
+  WebFontConfig = {
+    google: {
+      families: ['Josefin+Sans:400,700']
+    }
+  }
+
+  ConnectionSpeed.options.speedTestUrl = "{{site.cdn}}/25k.jpg";
+
+  ConnectionSpeed.get(function (bandwidth) {
+    Modernizr.load({
+      test: bandwidth == 'high' && cutsTheMustard,
+      yep: filesToLoad
+    });
+  });
 </script>
 </body>
 </html>

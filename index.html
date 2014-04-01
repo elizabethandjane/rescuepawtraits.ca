@@ -35,7 +35,7 @@
     {% for dog in site.posts %}
       <li class="dog dog--{{dog.orientation}}">
         <div class="dog__wrapper">
-          <a class="dog__link" href="{{dog.link}}">
+          <a class="dog__link" href="{{dog.link}}" rel="external">
             <span class="dog__img-wrapper">
               <img class="dog__img" src="{{site.cdn}}/{{dog.image}}" {{site.sizes[dog.orientation]}} alt="">
             </span>

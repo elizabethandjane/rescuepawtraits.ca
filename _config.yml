@@ -1,5 +1,7 @@
 markdown: redcarpet
 permalink: pretty
+paginate: 25
+paginate_path: "page-:num"
 exclude:
   - README.md
   - aws-s3.policy

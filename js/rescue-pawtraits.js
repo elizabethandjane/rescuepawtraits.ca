@@ -9,6 +9,7 @@ loadMore = function () {
   page++;
 
   if (page > maxPages) {
+    $btn.parent().remove();
     return;
   }
 
@@ -40,3 +41,13 @@ $('.loader').html($btn);
 $btn.on('click touchend', function (e) {
   loadMore();
 });
+
+$btn.waypoint(function () {
+  loadMore();
+  $btn.waypoint('disable');
+
+  setTimeout(function () {
+    $.waypoints('refresh');
+    $btn.waypoint('enable');
+  }, 400);
+}, { offset: '130%' });

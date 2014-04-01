@@ -1,7 +1,8 @@
 markdown: redcarpet
+baseurl: ""
 permalink: pretty
 paginate: 25
-paginate_path: "page-:num"
+paginate_path: "/dog-photos-:num"
 exclude:
   - README.md
   - aws-s3.policy

@@ -133,7 +133,7 @@ a:active {
 .footer {
   padding: 1em 0;
 
-  background-color: #718c63;
+  background-color: #556f4b;
 
   color: #fff;
   font-size: 0.75em;
@@ -229,4 +229,60 @@ a:active {
     border-radius: 6px;
   }
 
+}
+
+.pager {
+  margin: 0;
+  padding: 1em 0;
+
+  background-color: #718c63;
+
+  font-size: 1.125em;
+  list-style-type: none;
+  text-align: center;
+}
+
+.pager > li {
+  display: inline-block;
+}
+
+.pager__link,
+.pager__link:link,
+.pager__link:visited {
+  display: inline-block;
+  padding: 0.3em 0.75em;
+
+  background-color: #556f4b;
+  border: 0;
+}
+
+.pager__link:hover,
+.pager__link:focus,
+.pager__link:active {
+  background-color: #dfe7da;
+
+  color: #718c63;
+}
+
+
+.pager__link--current,
+.pager__link--current:link,
+.pager__link--current:visited,
+.pager__link--current:hover,
+.pager__link--current:focus,
+.pager__link--current:active {
+  background-color: #fff;
+
+  color: #718c63;
+}
+
+.pager__link--disabled,
+.pager__link--disabled:link,
+.pager__link--disabled:visited,
+.pager__link--disabled:hover,
+.pager__link--disabled:focus,
+.pager__link--disabled:active {
+  background-color: #67805b;
+
+  color: #556f4b;
 }

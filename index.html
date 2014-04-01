@@ -49,6 +49,32 @@
   </ol>
 </main>
 
+<nav role="navigation">
+  <ol class="pager">
+    {% if paginator.previous_page %}
+      <li><a class="pager__link" href="{{paginator.previous_page_path}}">Prev</a></li>
+    {% else %}
+      <li><span class="pager__link pager__link--disabled">Prev</span></li>
+    {% endif %}
+
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+        <li><mark class="pager__link pager__link--current">{{page}}</mark></li>
+      {% elsif page == 1 %}
+        <li><a class="pager__link" href="/">{{page}}</a></li>
+      {% else %}
+        <li><a class="pager__link" href="/dog-photos-{{page}}">{{page}}</a></li>
+      {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+      <li><a class="pager__link" href="{{paginator.next_page_path}}">Next</a></li>
+    {% else %}
+      <li><span class="pager__link pager__link--disabled">Next</span></li>
+    {% endif %}
+  </ol>
+</nav>
+
 <footer class="footer" role="contentifno">
   <p class="copyright">© {{site.time | date:'%Y'}} <a href="http://elizabethandjane.ca" rel="external">elizabethandjane photography</a>.</p>
 </footer>

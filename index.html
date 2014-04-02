@@ -108,7 +108,7 @@
     Modernizr.load({
       test: bandwidth == 'high' && cutsTheMustard,
       yep: filesSlow.concat(filesFast),
-      nope: filesSlow.push(mainJs)
+      nope: filesSlow.concat([mainJs])
     });
   });
 </script>

@@ -9,6 +9,9 @@ exclude:
 
 cdn: http://images.rescuepawtraits.ca
 
+title: "Rescue Pawtraits — Fabulous photos for rescue dogs — Ottawa, Canada"
+desc: "The stories in my Rescue Pawtraits celebrate the beginning of a new chapter for these dogs – the start of the rest of their new, and better, lives."
+
 sizes:
   portrait: 'width="300" height="452"'
   landscape: 'width="300" height="200"'

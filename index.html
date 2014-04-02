@@ -4,10 +4,23 @@
 <html lang="en-ca">
 <head>
   <meta charset="utf-8">
-  <title>Rescue Pawtraits — Fabulous photos for rescue dogs — Ottawa, Canada</title>
-  <meta name="description" content="The stories in my Rescue Pawtraits celebrate the beginning of a new chapter for these dogs – the start of the rest of their new, and better, lives.">
+  <title>{{site.title}}</title>
+  <meta name="description" content="{{site.desc}}">
   <link rel="source" href="https://github.com/elizabethandjane/rescuepawtraits.ca">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{site.title}}">
+  <meta property="og:url" content="http://rescuepawtraits.ca/">
+  <meta property="og:site_name" content="Rescue Pawtraits">
+  <meta property="og:description" content="{{site.title}}">
+  <meta name="twitter:card" content="gallery">
+  <meta name="twitter:title" content="{{site.title}}">
+  <meta name="twitter:url" content="http://rescuepawtraits.ca/">
+  <meta name="twitter:description" content="{{site.desc}}">
+  {% for dog in site.posts limit:4 %}
+    <meta property="og:image" content="{{site.cdn}}/{{dog.image}}">
+    <meta property="twitter:image{{forloop.index0}}" content="{{site.cdn}}/{{dog.image}}">
+  {% endfor %}
   <link href="/css/rescue-pawtraits.css" rel="stylesheet">
   <script src="/js/modernizr.min.js"></script>
 </head>

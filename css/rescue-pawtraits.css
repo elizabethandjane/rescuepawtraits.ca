@@ -175,6 +175,7 @@ a:active {
 
 .dog__img-wrapper {
   display: block;
+  margin: 0 auto;
   overflow: hidden;
   width: 300px;
 
@@ -263,6 +264,7 @@ a:active {
 .pager__link:link,
 .pager__link:visited {
   display: inline-block;
+  margin: 0 0 0.3em;
   padding: 0.3em 0.75em;
 
   background-color: #556f4b;

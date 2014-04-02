@@ -42,6 +42,15 @@ a:active {
   border-color: #fff;
 }
 
+a:hover,
+a:active {
+  outline: none;
+}
+
+a:focus {
+  outline: 3px solid #000;
+}
+
 .masthead {
   margin: 0;
   padding: 1em 0;

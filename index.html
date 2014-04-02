@@ -22,7 +22,7 @@
   <meta name="twitter:creator" content="@lizmbradley">
   {% for dog in site.posts limit:4 %}
     <meta property="og:image" content="{{site.cdn}}/{{dog.image}}">
-    <meta property="twitter:image{{forloop.index0}}" content="{{site.cdn}}/{{dog.image}}">
+    <meta name="twitter:image{{forloop.index0}}" content="{{site.cdn}}/{{dog.image}}">
   {% endfor %}
   <link href="/css/rescue-pawtraits.css" rel="stylesheet">
   <script src="/js/modernizr.min.js"></script>

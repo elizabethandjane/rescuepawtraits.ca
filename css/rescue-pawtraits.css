@@ -99,16 +99,11 @@ a:focus {
 .header__link:link,
 .header__link:visited {
   display: inline-block;
-  vertical-align: middle;
-
-  border: 0;
-}
-
-.header__link img {
-  display: inline-block;
   max-width: 300px;
   vertical-align: middle;
   width: 100%;
+
+  border: 0;
 }
 
 .intro {

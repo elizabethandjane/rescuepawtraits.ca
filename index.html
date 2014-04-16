@@ -56,15 +56,19 @@
 <main role="main">
   <ol class="dogs">
     {% for dog in paginator.posts %}
-      <li class="dog dog--{{dog.orientation}}">
+      <li class="dog dog--{{dog.orientation}}" itemscope itemtype="http://schema.org/Photograph">
         <div class="dog__wrapper">
           <a class="dog__link" href="{{dog.link}}" rel="external">
             <span class="dog__img-wrapper">
-              <img class="dog__img" src="{{site.cdn}}/{{dog.image}}" {{site.sizes[dog.orientation]}} alt="">
+              <img class="dog__img" src="{{site.cdn}}/{{dog.image}}" {{site.sizes[dog.orientation]}} alt="" itemprop="image">
             </span>
-            <strong class="dog__name">{{dog.name}}</strong>
-            <p class="dog__blurb">{{dog.blurb}}</p>
+            <strong class="dog__name" itemprop="name">{{dog.name}}</strong>
+            <p class="dog__blurb" itemprop="description">{{dog.blurb}}</p>
           </a>
+          <meta itemprop="author" itemref="author" itemscope itemtype="http://schema.org/Person">
+          <meta itemprop="isFamilyFriendly" content="true">
+          <meta itemprop="datePublished" content="{{dog.date | date:'%Y-%m-%d'}}">
+          <meta itemprop="keywords" content="dog,rescue,pawtrait,portrait,photo,cute">
         </div>
       </li>
     {% endfor %}
@@ -97,8 +101,10 @@
   </ol>
 </nav>
 
-<footer class="footer" role="contentifno">
-  <p class="copyright">© {{site.time | date:'%Y'}} <a href="http://elizabethandjane.ca" rel="external">elizabethandjane photography</a>.</p>
+<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/Person">
+  <div id="author">
+    <p class="copyright">© {{site.time | date:'%Y'}} <a href="http://elizabethandjane.ca" itemprop="url" rel="external"><span itemprop="name">Liz Bradley</span> of <span itemprop="worksFor" itemscope itemtype="http://schema.org/Organization"><span itemprop="name">elizabeth&amp;jane photography</span></span></a>.</p>
+  </div>
 </footer>
 
 <script src="/js/connection.js"></script>

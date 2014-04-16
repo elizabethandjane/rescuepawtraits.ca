@@ -47,6 +47,12 @@
   </div>
 </div>
 
+{% if paginator.page > 1 %}
+<div class="beginning">
+  <a class="btn" href="/">Go to beginning</a>
+</div>
+{% endif %}
+
 <main role="main">
   <ol class="dogs">
     {% for dog in paginator.posts %}

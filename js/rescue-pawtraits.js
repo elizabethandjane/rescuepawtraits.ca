@@ -4,11 +4,11 @@ maxPages = $('.pager li:nth-last-child(2) a').attr('href').replace(/[^\d]/g, '')
 $dogs = $('.dogs');
 
 btnLoading = function () {
-  $btn.addClass('load-btn--loading').attr('disabled', 'true').html('Loading…');
+  $btn.addClass('btn--loading').attr('disabled', 'true').html('Loading…');
 };
 
 btnDoneLoading = function () {
-  $btn.removeClass('load-btn--loading').removeAttr('disabled').html('Load More');
+  $btn.removeClass('btn--loading').removeAttr('disabled').html('Load More');
 }
 
 loadMore = function () {
@@ -50,8 +50,9 @@ if ("Masonry" in window) {
   });
 }
 
-$btn = $('<button class="load-btn">Load More</button>');
+$btn = $('<button class="btn">Load More</button>');
 $('.loader').html($btn);
+$('.beginning').show();
 
 $btn.on('click touchend', function (e) {
   loadMore();

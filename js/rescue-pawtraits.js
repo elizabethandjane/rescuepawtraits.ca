@@ -1,4 +1,4 @@
-var container, msnry, $btn, page = 1, loadMore, maxPages, $dogs, btnLoading, btnDoneLoading;
+var container, msnry, $btn, page = currentPage || 1, loadMore, maxPages, $dogs, btnLoading, btnDoneLoading;
 
 maxPages = $('.pager li:nth-last-child(2) a').attr('href').replace(/[^\d]/g, '');
 $dogs = $('.dogs');

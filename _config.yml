@@ -1,4 +1,3 @@
-markdown: redcarpet
 baseurl: ""
 permalink: pretty
 paginate: 25
